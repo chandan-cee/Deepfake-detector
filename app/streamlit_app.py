@@ -20,7 +20,7 @@ uploaded_file = st.file_uploader("Choose an image...", type=["jpg", "jpeg", "png
 
 if uploaded_file is not None:
     image = Image.open(uploaded_file).resize((IMG_SIZE, IMG_SIZE))
-    st.image(image, caption="Uploaded Image", use_containergit add_width=True)
+    st.image(image, caption="Uploaded Image", use_container_width=True)
 
     # Preprocess
     img = np.array(image) / 255.0  # normalize
@@ -28,7 +28,7 @@ if uploaded_file is not None:
 
     # Predict
     prediction = model.predict(img)[0][0]
-
+ 
     if prediction > 0.5:
         st.error(f"🧪 Prediction: **Fake** ({prediction:.2f})")
     else:
