@@ -1,0 +1,12 @@
+opencv-python
+tensorflow
+keras
+numpy
+matplotlib
+scikit-learn
+streamlit
+moviepy
+pandas
+tqdm
+imutils
+
